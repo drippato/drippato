@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giacche - Drippato</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <h1>Drippato</h1>
+  <p>Catalogo Giacche</p>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="scarpe.html">Scarpe</a></li>
+      <li><a href="magliette.html">Magliette e Pantaloncini</a></li>
+      <li><a href="tute.html">Tute e Maglioni</a></li>
+      <li><a href="jeans.html">Jeans</a></li>
+      <li><a href="giacche.html" class="active">Giacche</a></li>
+      <li><a href="accessori.html">Accessori</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="prodotti">
+    <div class="prodotto">
+      <img src="giacciacanadagoose.jpg" alt="Canada Goose">
+      <h3>Canada Goose</h3>
+      <p>70€</p>
+    </div>
+    <div class="prodotto">
+      <img src="mooseknuckles.jpg" alt="Moose Knuckles">
+      <h3>Moose Knuckles</h3>
+      <p>115€</p>
+    </div>  
+    <div class="prodotto">
+      <img src="monler.jpg" alt="Moncler">
+      <h3>Moncler </h3>
+      <p>55€</p>
+    </div>
+    <div class="prodotto">
+      <img src="giaccaburbarry.jpg" alt="Giacca Burbarry">
+      <h3>Giacca Burbarry</h3>
+      <p>50€</p>
+    </div>
+    <div class="prodotto">
+      <img src="smanicato island.jpg" alt="Smanicato Stone Island">
+      <h3>Smanicato Stone Island</h3>
+      <p>40€</p>
+    </div>
+    <div class="prodotto">
+      <img src="smanicatomoncler.jpg" alt="PSmanicato Moncler">
+      <h3>Smanicato Moncler</h3>
+      <p>45€</p>
+    </div>
+  </section>
+</main>
+<!-- Bottone Torna Su -->
+<button id="scrollTopBtn" title="Torna su">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<script>
+  // Mostra/nasconde il bottone quando scrolli
+  window.onscroll = function() {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+  // Scrolla verso l'alto quando clicchi il bottone
+  document.getElementById("scrollTopBtn").onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a0f2c;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #132c66, #0f1e4a);
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeInDown 1s ease forwards;
+}
+
+header h1 {
+  font-size: 3em;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+nav ul li a {
+  color: #ffffff;
+  background: #0f1e4a;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li a:hover {
+  background: #2e5aff;
+  transform: scale(1.05);
+}
+
+/* Ricerca */
+#ricerca {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container i {
+  position: absolute;
+  left: 20px;
+  color: #2e5aff;
+  font-size: 1.3em;
+  pointer-events: none;
+}
+
+#barraRicerca {
+  width: 100%;
+  padding: 14px 20px 14px 50px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background: #ffffff;
+  color: #0a0f2c;
+  box-shadow: 0 4px 20px rgba(46, 90, 255, 0.4);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+#barraRicerca::placeholder {
+  color: #2e5aff;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+#barraRicerca:focus {
+  background: #e6ebff;
+  box-shadow: 0 0 25px rgba(46, 90, 255, 0.6);
+  transform: scale(1.02);
+}
+
+#risultatiRicerca {
+  margin-top: 25px;
+}
+.info-home {
+  background: #132c66;
+  border-radius: 16px;
+  padding: 30px 20px;
+  margin: 40px auto 0 auto;
+  max-width: 750px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.23);
+  animation: fadeIn 1.3s;
+}
+
+.info-home h2 {
+  color: #2e5aff;
+  font-size: 2em;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.info-home ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-home li {
+  margin: 15px 0;
+  font-size: 1.13em;
+  line-height: 1.7;
+  display: flex;
+  align-items: flex-start;
+}
+
+.info-home li strong {
+  color: #fff;
+  margin-right: 7px;
+}
+
+/* Optional: icona prima di ogni punto */
+.info-home li::before {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #2e5aff;
+  margin-right: 10px;
+  font-size: 1.1em;
+  margin-top: 4px;
+}
+
+
+/* Prodotti */
+.prodotto {
+  background: #132c66;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.8s ease;
+}
+
+.prodotto:hover {
+  transform: scale(1.05);
+}
+
+.prodotto img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.prodotto h3 {
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+.prodotto p {
+  font-size: 1.1em;
+  color: #a3baff;
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bottone Torna Su */
+#scrollTopBtn {
+  display: none; /* Nascosto di default */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  border: none;
+  outline: none;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.3s;
+}
+#scrollTopBtn:hover {
+  background-color: #444;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+  #scrollTopBtn {
+    bottom: 18px;
+    right: 18px;
+    padding: 12px;
+    font-size: 18px;
+  }
+}
